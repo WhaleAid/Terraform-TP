@@ -22,4 +22,4 @@ nvm install node
 # launch the app
 cd webos
 npm install
-npm run dev --host &
+npm run start&
