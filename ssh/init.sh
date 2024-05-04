@@ -18,8 +18,11 @@ git clone https://github.com/alexdieudonne/webos.git
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
 source ~/.bashrc
 nvm install node
+npm install pm2 -g
+
 
 # launch the app
 cd webos
 npm install
-npm run start&
+npm build
+pm2 --name webos start npm -- run dev -- --host 0.0.0.0
